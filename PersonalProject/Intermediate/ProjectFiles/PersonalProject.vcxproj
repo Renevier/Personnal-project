@@ -67,7 +67,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{510942A6-493F-3901-B5D3-2E38EA861F55}</ProjectGuid>
+    <ProjectGuid>{197A4942-BC41-3876-813C-15737A05CF2C}</ProjectGuid>
     <RootNamespace>PersonalProject</RootNamespace>
   </PropertyGroup>
   <Import Project="UECommon.props" />

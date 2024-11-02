@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\moi\\documents\\unreal projects\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\personalproject.init.gen.cpp",
+        "Source": "c:\\users\\moi\\documents\\github\\personnal-project\\personalproject\\intermediate\\build\\win64\\unrealeditor\\inc\\personalproject\\uht\\personalproject.init.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\moi\\documents\\unreal projects\\personalproject\\intermediate\\build\\win64\\x64\\personalprojecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "PCH": "c:\\users\\moi\\documents\\github\\personnal-project\\personalproject\\intermediate\\build\\win64\\x64\\personalprojecteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "c:\\users\\moi\\documents\\unreal projects\\personalproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\personalproject\\definitions.personalproject.h"
+            "c:\\users\\moi\\documents\\github\\personnal-project\\personalproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\personalproject\\definitions.personalproject.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -14,16 +14,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PERSONALPROJECT_Tree_generated_h
 
-#define FID_Users_Moi_Documents_Unreal_Projects_PersonalProject_Source_PersonalProject_Tree_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_Users_Moi_Documents_GitHub_Personnal_project_PersonalProject_Source_PersonalProject_Tree_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATree(); \
 	friend struct Z_Construct_UClass_ATree_Statics; \
 public: \
 	DECLARE_CLASS(ATree, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/PersonalProject"), NO_API) \
-	DECLARE_SERIALIZER(ATree)
+	DECLARE_SERIALIZER(ATree) \
+	virtual UObject* _getUObject() const override { return const_cast<ATree*>(this); }
 
 
-#define FID_Users_Moi_Documents_Unreal_Projects_PersonalProject_Source_PersonalProject_Tree_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_Users_Moi_Documents_GitHub_Personnal_project_PersonalProject_Source_PersonalProject_Tree_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ATree(ATree&&); \
@@ -35,12 +36,12 @@ public: \
 	NO_API virtual ~ATree();
 
 
-#define FID_Users_Moi_Documents_Unreal_Projects_PersonalProject_Source_PersonalProject_Tree_h_9_PROLOG
-#define FID_Users_Moi_Documents_Unreal_Projects_PersonalProject_Source_PersonalProject_Tree_h_12_GENERATED_BODY \
+#define FID_Users_Moi_Documents_GitHub_Personnal_project_PersonalProject_Source_PersonalProject_Tree_h_10_PROLOG
+#define FID_Users_Moi_Documents_GitHub_Personnal_project_PersonalProject_Source_PersonalProject_Tree_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_Moi_Documents_Unreal_Projects_PersonalProject_Source_PersonalProject_Tree_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Users_Moi_Documents_Unreal_Projects_PersonalProject_Source_PersonalProject_Tree_h_12_ENHANCED_CONSTRUCTORS \
+	FID_Users_Moi_Documents_GitHub_Personnal_project_PersonalProject_Source_PersonalProject_Tree_h_13_INCLASS_NO_PURE_DECLS \
+	FID_Users_Moi_Documents_GitHub_Personnal_project_PersonalProject_Source_PersonalProject_Tree_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +49,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> PERSONALPROJECT_API UClass* StaticClass<class ATree>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_Moi_Documents_Unreal_Projects_PersonalProject_Source_PersonalProject_Tree_h
+#define CURRENT_FILE_ID FID_Users_Moi_Documents_GitHub_Personnal_project_PersonalProject_Source_PersonalProject_Tree_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\Moi\\Documents\\Unreal Projects\\PersonalProject\\Source\\PersonalProject\\PersonalProject.Build.cs",
-		"C:\\Users\\Moi\\Documents\\Unreal Projects\\PersonalProject\\Source\\PersonalProject.Target.cs",
-		"C:\\Users\\Moi\\Documents\\Unreal Projects\\PersonalProject\\Source\\PersonalProjectEditor.Target.cs"
+		"C:\\Users\\Moi\\Documents\\GitHub\\Personnal-project\\PersonalProject\\Source\\PersonalProject\\PersonalProject.Build.cs",
+		"C:\\Users\\Moi\\Documents\\GitHub\\Personnal-project\\PersonalProject\\Source\\PersonalProject.Target.cs",
+		"C:\\Users\\Moi\\Documents\\GitHub\\Personnal-project\\PersonalProject\\Source\\PersonalProjectEditor.Target.cs"
 	],
 	"EngineVersion": "5.4.3"
 }

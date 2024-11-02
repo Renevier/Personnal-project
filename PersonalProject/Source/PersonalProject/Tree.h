@@ -4,10 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Interactible.h"
 #include "Tree.generated.h"
 
 UCLASS()
-class PERSONALPROJECT_API ATree : public AActor
+class PERSONALPROJECT_API ATree : public AActor, public IInteractible
 {
 	GENERATED_BODY()
 	

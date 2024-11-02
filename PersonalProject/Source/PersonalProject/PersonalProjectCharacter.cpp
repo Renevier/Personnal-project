@@ -10,7 +10,6 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
-#include "Components/BoxComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -53,21 +52,12 @@ APersonalProjectCharacter::APersonalProjectCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
-
-	interactBox = CreateDefaultSubobject <UBoxComponent>(TEXT("interactBox"));
-	interactBox->SetRelativeLocation(FVector(50.0f, 0.0f, 0.0f));
-	interactBox->SetBoxExtent(FVector(32.0f, 32.0f, 64.0f));
-	interactBox->SetupAttachment(RootComponent);
 }
 
 void APersonalProjectCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
-}
-
-void APersonalProjectCharacter::OnOverlapContinue(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FOverlapInfo& OverlapInfo)
-{
 }
 
 //////////////////////////////////////////////////////////////////////////

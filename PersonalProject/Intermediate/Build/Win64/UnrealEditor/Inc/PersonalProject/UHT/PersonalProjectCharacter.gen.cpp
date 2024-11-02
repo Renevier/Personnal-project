@@ -11,7 +11,6 @@ void EmptyLinkFunctionForGeneratedCodePersonalProjectCharacter() {}
 
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
-ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
@@ -36,12 +35,6 @@ struct Z_Construct_UClass_APersonalProjectCharacter_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "PersonalProjectCharacter.h" },
-		{ "ModuleRelativePath", "PersonalProjectCharacter.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_interactBox_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "PersonalProjectCharacter" },
-		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "PersonalProjectCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CameraBoom_MetaData[] = {
@@ -113,7 +106,6 @@ struct Z_Construct_UClass_APersonalProjectCharacter_Statics
 #endif
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_interactBox;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FollowCamera;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DefaultMappingContext;
@@ -127,7 +119,6 @@ struct Z_Construct_UClass_APersonalProjectCharacter_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APersonalProjectCharacter_Statics::NewProp_interactBox = { "interactBox", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APersonalProjectCharacter, interactBox), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_interactBox_MetaData), NewProp_interactBox_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APersonalProjectCharacter_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APersonalProjectCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CameraBoom_MetaData), NewProp_CameraBoom_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APersonalProjectCharacter_Statics::NewProp_FollowCamera = { "FollowCamera", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APersonalProjectCharacter, FollowCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FollowCamera_MetaData), NewProp_FollowCamera_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APersonalProjectCharacter_Statics::NewProp_DefaultMappingContext = { "DefaultMappingContext", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APersonalProjectCharacter, DefaultMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultMappingContext_MetaData), NewProp_DefaultMappingContext_MetaData) };
@@ -135,7 +126,6 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APersonalProje
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APersonalProjectCharacter_Statics::NewProp_MoveAction = { "MoveAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APersonalProjectCharacter, MoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveAction_MetaData), NewProp_MoveAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APersonalProjectCharacter_Statics::NewProp_LookAction = { "LookAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APersonalProjectCharacter, LookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LookAction_MetaData), NewProp_LookAction_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APersonalProjectCharacter_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APersonalProjectCharacter_Statics::NewProp_interactBox,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APersonalProjectCharacter_Statics::NewProp_CameraBoom,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APersonalProjectCharacter_Statics::NewProp_FollowCamera,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APersonalProjectCharacter_Statics::NewProp_DefaultMappingContext,
@@ -181,14 +171,14 @@ APersonalProjectCharacter::~APersonalProjectCharacter() {}
 // End Class APersonalProjectCharacter
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_Moi_Documents_Unreal_Projects_PersonalProject_Source_PersonalProject_PersonalProjectCharacter_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_Moi_Documents_GitHub_Personnal_project_PersonalProject_Source_PersonalProject_PersonalProjectCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APersonalProjectCharacter, APersonalProjectCharacter::StaticClass, TEXT("APersonalProjectCharacter"), &Z_Registration_Info_UClass_APersonalProjectCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APersonalProjectCharacter), 2502629748U) },
+		{ Z_Construct_UClass_APersonalProjectCharacter, APersonalProjectCharacter::StaticClass, TEXT("APersonalProjectCharacter"), &Z_Registration_Info_UClass_APersonalProjectCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APersonalProjectCharacter), 75562073U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Moi_Documents_Unreal_Projects_PersonalProject_Source_PersonalProject_PersonalProjectCharacter_h_755589789(TEXT("/Script/PersonalProject"),
-	Z_CompiledInDeferFile_FID_Users_Moi_Documents_Unreal_Projects_PersonalProject_Source_PersonalProject_PersonalProjectCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Moi_Documents_Unreal_Projects_PersonalProject_Source_PersonalProject_PersonalProjectCharacter_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Moi_Documents_GitHub_Personnal_project_PersonalProject_Source_PersonalProject_PersonalProjectCharacter_h_4219134761(TEXT("/Script/PersonalProject"),
+	Z_CompiledInDeferFile_FID_Users_Moi_Documents_GitHub_Personnal_project_PersonalProject_Source_PersonalProject_PersonalProjectCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Moi_Documents_GitHub_Personnal_project_PersonalProject_Source_PersonalProject_PersonalProjectCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

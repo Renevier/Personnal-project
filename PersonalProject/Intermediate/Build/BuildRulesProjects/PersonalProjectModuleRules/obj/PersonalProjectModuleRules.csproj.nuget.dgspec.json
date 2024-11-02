@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Moi\\Documents\\Unreal Projects\\PersonalProject\\Intermediate\\Build\\BuildRulesProjects\\PersonalProjectModuleRules\\PersonalProjectModuleRules.csproj": {}
+    "C:\\Users\\Moi\\Documents\\GitHub\\Personnal-project\\PersonalProject\\Intermediate\\Build\\BuildRulesProjects\\PersonalProjectModuleRules\\PersonalProjectModuleRules.csproj": {}
   },
   "projects": {
     "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5ProgramRules\\UE5ProgramRules.csproj": {
@@ -1053,14 +1053,14 @@
         }
       }
     },
-    "C:\\Users\\Moi\\Documents\\Unreal Projects\\PersonalProject\\Intermediate\\Build\\BuildRulesProjects\\PersonalProjectModuleRules\\PersonalProjectModuleRules.csproj": {
+    "C:\\Users\\Moi\\Documents\\GitHub\\Personnal-project\\PersonalProject\\Intermediate\\Build\\BuildRulesProjects\\PersonalProjectModuleRules\\PersonalProjectModuleRules.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Moi\\Documents\\Unreal Projects\\PersonalProject\\Intermediate\\Build\\BuildRulesProjects\\PersonalProjectModuleRules\\PersonalProjectModuleRules.csproj",
+        "projectUniqueName": "C:\\Users\\Moi\\Documents\\GitHub\\Personnal-project\\PersonalProject\\Intermediate\\Build\\BuildRulesProjects\\PersonalProjectModuleRules\\PersonalProjectModuleRules.csproj",
         "projectName": "PersonalProjectModuleRules",
-        "projectPath": "C:\\Users\\Moi\\Documents\\Unreal Projects\\PersonalProject\\Intermediate\\Build\\BuildRulesProjects\\PersonalProjectModuleRules\\PersonalProjectModuleRules.csproj",
+        "projectPath": "C:\\Users\\Moi\\Documents\\GitHub\\Personnal-project\\PersonalProject\\Intermediate\\Build\\BuildRulesProjects\\PersonalProjectModuleRules\\PersonalProjectModuleRules.csproj",
         "packagesPath": "C:\\Users\\Moi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Moi\\Documents\\Unreal Projects\\PersonalProject\\Intermediate\\Build\\BuildRulesProjects\\PersonalProjectModuleRules\\obj\\",
+        "outputPath": "C:\\Users\\Moi\\Documents\\GitHub\\Personnal-project\\PersonalProject\\Intermediate\\Build\\BuildRulesProjects\\PersonalProjectModuleRules\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Moi\\AppData\\Roaming\\NuGet\\NuGet.Config",
