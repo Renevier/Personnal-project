@@ -4,6 +4,7 @@
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/BoxComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/Controller.h"
@@ -50,6 +51,10 @@ APersonalProjectCharacter::APersonalProjectCharacter()
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
+	interactBox = CreateDefaultSubobject<UBoxComponent>(TEXT("InteractBox"));
+	interactBox->SetRelativeLocation(FVector(50.0f, 0.0f, 0.0f));
+	interactBox->SetBoxExtent(FVector(35.0f, 35.0f, 75.0f));
+	interactBox->SetupAttachment(RootComponent);
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 }
@@ -86,6 +91,9 @@ void APersonalProjectCharacter::SetupPlayerInputComponent(UInputComponent* Playe
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &APersonalProjectCharacter::Look);
+
+		//Interact
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, &APersonalProjectCharacter::Interact);
 	}
 	else
 	{
@@ -127,4 +135,8 @@ void APersonalProjectCharacter::Look(const FInputActionValue& Value)
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
+}
+
+void APersonalProjectCharacter::Interact()
+{
 }

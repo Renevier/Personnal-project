@@ -24,4 +24,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+
+	// Hérité via IInteractible
+	void Interact() override;
+
 };

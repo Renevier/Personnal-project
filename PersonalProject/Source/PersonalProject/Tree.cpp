@@ -25,3 +25,7 @@ void ATree::Tick(float DeltaTime)
 
 }
 
+void ATree::Interact()
+{
+}
+
