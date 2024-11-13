@@ -57,12 +57,18 @@ APersonalProjectCharacter::APersonalProjectCharacter()
 	interactBox->SetupAttachment(RootComponent);
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
+
+	interactBox->OnComponentBeginOverlap.AddDynamic(this, &APersonalProjectCharacter::OnCollisionEnter);
 }
 
 void APersonalProjectCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+}
+
+void APersonalProjectCharacter::OnCollisionEnter(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& Hit)
+{
 }
 
 //////////////////////////////////////////////////////////////////////////
