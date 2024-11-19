@@ -74,9 +74,16 @@ protected:
 	// To add mapping context
 	virtual void BeginPlay();
 
+protected: 
+
+	bool isInteracting { false };
+
+	TArray<IInteractible*> interactiblesActors;
+
 public:
-	UFUNCTION()
+
 	void OnCollisionEnter(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& Hit);
+	void OnCollisionExit(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }

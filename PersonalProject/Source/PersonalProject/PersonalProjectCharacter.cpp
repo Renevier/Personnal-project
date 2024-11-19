@@ -11,6 +11,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "Interactible.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -21,7 +22,7 @@ APersonalProjectCharacter::APersonalProjectCharacter()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
-		
+
 	// Don't rotate when the controller rotates. Let that just affect the camera.
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
@@ -59,6 +60,7 @@ APersonalProjectCharacter::APersonalProjectCharacter()
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 
 	interactBox->OnComponentBeginOverlap.AddDynamic(this, &APersonalProjectCharacter::OnCollisionEnter);
+	interactBox->OnComponentEndOverlap.AddDynamic(this, &APersonalProjectCharacter::OnCollisionExit);
 }
 
 void APersonalProjectCharacter::BeginPlay()
@@ -69,6 +71,22 @@ void APersonalProjectCharacter::BeginPlay()
 
 void APersonalProjectCharacter::OnCollisionEnter(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& Hit)
 {
+	IInteractible* interactibleActor = Cast<IInteractible>(OtherActor);
+
+	if (interactibleActor)
+	{
+		interactiblesActors.Add(interactibleActor);
+	}
+}
+
+void APersonalProjectCharacter::OnCollisionExit(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	IInteractible* interactibleActor = Cast<IInteractible>(OtherActor);
+
+	if (interactibleActor)
+	{
+		interactiblesActors.Remove(interactibleActor);
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -84,10 +102,10 @@ void APersonalProjectCharacter::SetupPlayerInputComponent(UInputComponent* Playe
 			Subsystem->AddMappingContext(DefaultMappingContext, 0);
 		}
 	}
-	
+
 	// Set up action bindings
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
-		
+
 		// Jumping
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
@@ -120,7 +138,7 @@ void APersonalProjectCharacter::Move(const FInputActionValue& Value)
 
 		// get forward vector
 		const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-	
+
 		// get right vector 
 		const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 
@@ -145,4 +163,19 @@ void APersonalProjectCharacter::Look(const FInputActionValue& Value)
 
 void APersonalProjectCharacter::Interact()
 {
+	if (isInteracting || interactiblesActors.IsEmpty())
+		return;
+
+	interactiblesActors.Sort([this](AActor& A, AActor& B)
+		{
+			float distA = FVector::Dist(A.GetActorLocation(), GetActorLocation());
+			float distB = FVector::Dist(B.GetActorLocation(), GetActorLocation());
+
+			return distA < distB;
+		});
+
+	interactiblesActors[0]->Interact();
+
+	isInteracting = true;
+
 }
